@@ -1,0 +1,132 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Asetes/Sprites plater/cuboprota3.png" type="Texture" id=1]
+[ext_resource path="res://Asetes/Sprites plater/cuboprota4.png" type="Texture" id=2]
+[ext_resource path="res://Asetes/Sprites plater/cuboprota2.png" type="Texture" id=3]
+[ext_resource path="res://Asetes/Sprites plater/cuboprota.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/script player/plater.gd" type="Script" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 85, 170, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 85, 170, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 85, 170, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 85, 85, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 85, 85, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 32, 16, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 170, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 170, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 170, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 85, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 85, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 85, 0, 85, 85 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "Carriba",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "Cizabajo",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "muelto",
+"speed": 1.5
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "Cderbajo",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 13 ), SubResource( 15 ), SubResource( 15 ), SubResource( 13 ) ],
+"loop": true,
+"name": "idl",
+"speed": 5.0
+} ]
+
+[node name="jugado" type="KinematicBody2D"]
+script = ExtResource( 5 )
+
+[node name="balaori" type="Sprite" parent="."]
+rotation = 1.55215
+scale = Vector2( -1.33011, -1.43841 )
+
+[node name="cubopla" type="AnimatedSprite" parent="."]
+scale = Vector2( 1.08235, 1 )
+frames = SubResource( 16 )
+animation = "idl"
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -2.80616, 1.12246 )
+scale = Vector2( 0.884259, 0.875856 )
+polygon = PoolVector2Array( 26.8839, -19.1177, 28.5227, -18.316, 29.0644, 32.5468, -23.8615, 32.4809, -24.2583, -18.316, -9.17804, -25.4593, 18.2046, -25.0624, 26.9353, -19.1097 )

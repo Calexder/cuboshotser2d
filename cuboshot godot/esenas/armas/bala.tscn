@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Asetes/sprites armas/bala 1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/script player/script bala y armas/balamag.gd" type="Script" id=2]
+
+[node name="balamag" type="Sprite"]
+z_index = 2
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
