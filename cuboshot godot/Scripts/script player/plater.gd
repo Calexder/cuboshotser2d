@@ -26,8 +26,8 @@ func get_input():
 #mirando si la bala dispara
 	if Input.is_action_just_pressed("fayaa"):
 		var balainstanciada = balade.instance()
-		balainstanciada.disparar($balaori.global_position, get_global_mouse_position())
-		balainstanciada.global_position = $balaori.global_position
+		balainstanciada.disparar($balaori.position, get_local_mouse_position())
+		balainstanciada.global_position = $balaori.position
 		add_child(balainstanciada)
 		
 	velocidad = velocidad.normalized() * movimiento
